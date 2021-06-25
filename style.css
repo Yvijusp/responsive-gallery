@@ -72,7 +72,7 @@ header .container ul {
 }
 header .container ul li {
   list-style: none;
-  margin: 3px;
+  margin-top: 3px;
 }
 
 header .container ul li a {
