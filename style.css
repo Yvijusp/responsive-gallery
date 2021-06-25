@@ -1,0 +1,234 @@
+/* 
+-- Menu font-family: Lato, sans-serif;
+-- Menu font color: #151515
+-- Menu button background-color: #b6b6b6
+*/
+:root {
+  --menu-font-family: 'Lato', sans-serif;
+  --menu-font-color: #151515;
+  --menu-button-bg-color: #b6b6b6;
+}
+/* YOUR CODE HERE ir beje sėkmės*/
+
+/* MOBILE FIRST */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/* RESPONSIVE HEADER */
+.toggler i {
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+header {
+  font-family: var(--menu-font-family);
+  color: var(--menu-font-color);
+}
+
+.container {
+  padding: 20px 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo {
+  width: 50%;
+  max-width: 180px;
+}
+
+header .container #portfolio {
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+header .container .btn {
+  padding: 15px 20px;
+  background-color: var(--menu-button-bg-color);
+  border: none;
+  outline: none;
+  color: white;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+header .container ul {
+  list-style: none;
+}
+header .container ul li {
+  list-style: none;
+  margin: 3px;
+}
+
+header .container ul li a {
+  color: var(--menu-font-color);
+  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .container .logos {
+  display: flex;
+  justify-content: center;
+}
+
+header .container .logos i {
+  margin-right: 5px;
+  text-align: center;
+}
+
+header .nav {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 1;
+  text-align: center;
+  background-color: white;
+}
+
+header .hide {
+  display: none;
+}
+
+.toggler {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  header .hide {
+    display: block;
+  }
+
+  header .toggler {
+    display: none;
+  }
+
+  header .nav {
+    position: unset;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: flex-end;
+  }
+
+  header .container ul {
+    display: flex;
+  }
+
+  header .container .logo {
+    width: 25%;
+    margin-right: 20px;
+  }
+  header .container ul li {
+    margin-right: 5px;
+  }
+
+  header .container ul li a {
+    font-size: 0.7em;
+    color: var(--menu-button-bg-color);
+  }
+  header .container #portfolio {
+    font-size: 0.7em;
+    color: var(--menu-button-bg-color);
+  }
+
+  header .container .logos {
+    margin: 0 10px;
+  }
+
+  header .container .btn {
+    padding: 15px 10px;
+    background-color: var(--menu-button-bg-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 20px 40px;
+  }
+  header .container .btn {
+    padding: 18px 30px;
+    background-color: var(--menu-button-bg-color);
+  }
+  header .container ul li a {
+    font-size: 0.7em;
+    color: var(--menu-button-bg-color);
+  }
+  header .container #portfolio {
+    font-size: 0.7em;
+    color: var(--menu-button-bg-color);
+  }
+  header .container ul li {
+    margin: 0 15px;
+  }
+  header .container .logos {
+    margin: 0 40px;
+  }
+
+  header .container .logos li {
+    margin: 10px;
+  }
+}
+
+/* RESPONSIVE GALLERY */
+
+main .container .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  margin: 0 auto;
+  gap: 40px;
+}
+
+main .container .grid-item {
+  width: 100%;
+}
+
+main .container .grid-item img {
+  max-width: 203px;
+
+  height: 300px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  main .container .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+  }
+  main .container .grid-item img {
+    max-width: 274px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main .container .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 85px;
+  }
+  main .container .grid-item img {
+    max-width: 300px;
+    /* width: 300px; */
+    height: 300px;
+  }
+}
